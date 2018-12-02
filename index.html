@@ -1,0 +1,24 @@
+
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+<div id="renderList" >
+
+    <ul>
+
+        <li v-for="item in groceryList" :key="item.id">
+            {{ item.id }} {{ item.text }}
+            <button v-on:click="remove_this_item(item.id)"> Remove This</button>
+            <button v-on:click="edit_this_item(item.id)"> Edit this</button>
+        </li>
+    </ul>
+
+
+
+    <button v-on:click="add_new_item"> Add New @ back</button>
+    <button v-on:click="add_front_item"> Add New @ front</button>
+    <button v-on:click="remove_last_item">Remove Last</button>
+    <button v-on:click="remove_first_item">Remove First</button>
+    <button v-on:click="shuffle_all_items">Shuffle items</button>
+</div>
+
+<script src="index.js"></script>
